@@ -9,8 +9,12 @@ export default function Navbar({ isTransparent }) {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   return (
-    <nav className={`${isTransparent ? "" : "bg-gradient"}  ${isOpen ? styles.open : ""}`}>
-      <div className={"wrapper " + styles.nav}>
+    <nav
+      className={`${styles.nav} ${isTransparent ? "" : "bg-gradient"}  ${
+        isOpen ? styles.open : ""
+      }`}
+    >
+      <div className={"wrapper " + styles.navWrapper}>
         <Logo />
 
         <div className={styles.menuWrapper} onClick={() => setIsOpen((prev) => !prev)}>

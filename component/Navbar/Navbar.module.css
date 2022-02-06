@@ -1,5 +1,6 @@
 .menuWrapper {
   display: none;
+  cursor: pointer;
 }
 
 .menuStripes:first-child {
@@ -22,10 +23,15 @@
   left: 0;
   right: 0;
   background-color: transparent;
-  color: #ffffff;
+  isolation: isolate;
+  z-index: 1000;
+}
+
+.navWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #ffffff;
 }
 
 .navList {
@@ -69,7 +75,7 @@
     animation: slideLeft 200ms;
   }
 
-  .open .nav::before {
+  .open.nav::before {
     content: "";
     position: fixed;
     top: 0;

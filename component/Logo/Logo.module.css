@@ -1,0 +1,12 @@
+.logoWrapper {
+  font-weight: var(--fw-medium);
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
+
+.second {
+  color: black;
+  background-color: rgb(253, 253, 253);
+  padding: 0.25em 0.7em;
+  margin-left: 1rem;
+}

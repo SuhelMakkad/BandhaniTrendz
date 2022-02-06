@@ -52,12 +52,24 @@ section {
 
 .bg-gradient {
   background: rgb(96, 0, 0);
-  background: linear-gradient(
-    135deg,
-    rgba(96, 0, 0, 1) 0%,
-    rgba(139, 81, 36, 1) 50%,
-    rgba(0, 138, 88, 1) 100%
-  );
+  background: url(/assets/background-patter-1.png),
+    linear-gradient(
+      135deg,
+      rgba(96, 0, 0, 1) 0%,
+      rgba(139, 81, 36, 1) 50%,
+      rgba(0, 138, 88, 1) 100%
+    );
+}
+
+.bg-gradient.bg-pattern-1 {
+  background: rgb(96, 0, 0);
+  background: url(/assets/background-patter-1.png),
+    linear-gradient(
+      135deg,
+      rgba(96, 0, 0, 1) 0%,
+      rgba(139, 81, 36, 1) 50%,
+      rgba(0, 138, 88, 1) 100%
+    );
 }
 
 .two-section-wrapper {

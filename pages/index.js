@@ -1,9 +1,23 @@
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "../component/Navbar";
+import Carousel from "../component/Carousel";
+import { useEffect, useState } from "react";
+
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const [heroImages, setHeroImages] = useState([]);
+
+  useEffect(() => {
+    setHeroImages([
+      { src: "/assets/images/saree_4.jpeg", title: "SAREE 1" },
+      { src: "/assets/images/dupata_2.jpeg", title: "SAREE 4" },
+      { src: "/assets/images/dress_5.jpeg", title: "SAREE 3" },
+      { src: "/assets/images/saree_6.jpeg", title: "SAREE 4" },
+    ]);
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,20 +31,30 @@ export default function Home() {
       <main className={styles.main}>
         <section id={styles.heroSection} className="bg-gradient bg-pattern-1">
           <div className="wrapper two-section-wrapper ">
-            <div className="left">
+            <div className="left left-60">
               <h2 className={styles.heroHeading}>Wide Range of Classic BANDHAJ Apparels</h2>
               <button className={"btn " + styles.exploreBtn}>Explore Now</button>
             </div>
 
-            <div className="right">
-              <div className={styles.imageWrapper}>
-                <Image
-                  className={styles.heroImage}
-                  src="/assets/images/saree_4.jpeg"
-                  width={350}
-                  height={250}
-                  layout="responsive"
-                />
+            <div className="right right-40">
+              <div className={styles.carouselWrapper}>
+                <Carousel>
+                  {heroImages && heroImages.length
+                    ? heroImages.map((heroImage, i) => (
+                        <div key={i} className={styles.imageWrapper}>
+                          <Image
+                            priority={i === 0}
+                            className={styles.heroImage}
+                            src={heroImage.src}
+                            width={350}
+                            height={230}
+                            layout="responsive"
+                          />
+                          <span className={styles.heroImageTitle}>{heroImage.title}</span>
+                        </div>
+                      ))
+                    : ["Loading..."]}
+                </Carousel>
               </div>
             </div>
           </div>

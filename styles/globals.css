@@ -6,6 +6,8 @@
   --margin-x: 2.5rem;
   --margin-y: 1.5rem;
 
+  --fw-thin: 100;
+  --fw-light: 300;
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semi-bold: 600;
@@ -83,6 +85,37 @@ section {
 .two-section-wrapper .right,
 .two-section-wrapper .left {
   width: 50%;
+}
+
+.two-section-wrapper .left-60 {
+  width: 60%;
+}
+
+.two-section-wrapper .right-40 {
+  width: 40%;
+}
+
+.two-section-wrapper .left-40 {
+  width: 40%;
+}
+
+.two-section-wrapper .right-60 {
+  width: 60%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  background: transparent;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: white !important;
 }
 
 @media (max-width: 900px) {

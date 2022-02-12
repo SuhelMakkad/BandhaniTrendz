@@ -13,10 +13,25 @@
   --fw-semi-bold: 600;
 }
 
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #8b8b8b;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* for mozilla */
+  scrollbar-color: #8b8b8b #f0f0f0;
+  scrollbar-width: thin;
 }
 
 body {
@@ -43,7 +58,35 @@ button {
 
 section {
   margin: auto;
-  padding: 8rem 0;
+  padding: 6rem 0;
+}
+
+nav.active {
+  background: rgba(0, 0, 0, 0.55);
+  animation: fadeIn 500ms ease-in-out;
+}
+
+nav.inactive {
+  background: rgba(0, 0, 0, 0);
+  animation: fadeOut 500ms ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    background: rgba(0, 0, 0, 0.55);
+  }
+  to {
+    background: rgba(0, 0, 0, 0);
+  }
 }
 
 .wrapper {
@@ -53,14 +96,12 @@ section {
 }
 
 .bg-gradient {
-  background: rgb(96, 0, 0);
-  background: url(/assets/background-patter-1.png),
-    linear-gradient(
-      135deg,
-      rgba(96, 0, 0, 1) 0%,
-      rgba(139, 81, 36, 1) 50%,
-      rgba(0, 138, 88, 1) 100%
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(96, 0, 0, 1) 0%,
+    rgba(139, 81, 36, 1) 50%,
+    rgba(0, 138, 88, 1) 100%
+  );
 }
 
 .bg-gradient.bg-pattern-1 {

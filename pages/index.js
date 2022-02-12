@@ -72,6 +72,31 @@ export default function Home() {
         price: 1799,
       },
     ]);
+
+    if (!firstSection.current) return;
+    console.log(firstSection.current);
+
+    const sectionOneOptions = {
+      rootMargin: "0px 0px 0px 0px",
+      threshold: 1,
+    };
+
+    const sectionOneObserver = new IntersectionObserver((entries, sectionOneObserver) => {
+      entries.forEach((entry) => {
+        const nav = document.querySelector("nav");
+        if (!entry.isIntersecting) {
+          nav && nav.classList.add("active");
+          nav && nav.classList.remove("inactive");
+        } else {
+          nav && nav.classList.add("inactive");
+          nav && nav.classList.remove("active");
+        }
+      });
+    }, sectionOneOptions);
+
+    sectionOneObserver.observe(firstSection.current);
+
+    return () => sectionOneObserver.unobserve(firstSection.current);
   }, []);
 
   return (

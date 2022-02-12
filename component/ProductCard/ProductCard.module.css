@@ -1,0 +1,42 @@
+.peoductCard {
+  cursor: pointer;
+}
+
+.peoductCard:hover .image {
+  transform: scale(1.1);
+}
+
+.imageWrapper {
+  position: relative;
+  height: 350px;
+  margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 1px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.image {
+  transition: transform 200ms ease-in-out;
+  border-radius: 0.75rem;
+}
+
+.heading {
+  font-weight: var(--fw-medium);
+  font-size: 1.225rem;
+  margin-bottom: 0.2rem;
+}
+
+.ratingWrapper {
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  display: block;
+}
+
+.reviewCount {
+  margin-left: 0.35rem;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: var(--fw-medium);
+}

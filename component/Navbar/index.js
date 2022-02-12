@@ -8,6 +8,7 @@ import styles from "./Navbar.module.css";
 export default function Navbar({ isTransparent }) {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+
   return (
     <nav
       className={`${styles.nav} ${isTransparent ? "" : "bg-gradient"}  ${

@@ -1,3 +1,9 @@
+/*
+- Herso Section 
+- Best Seller Section
+*/
+
+/* Herso Section */
 #heroSection {
   padding-top: 6rem;
   --border-radius: 1.5rem;
@@ -59,4 +65,21 @@
   .carouselWrapper {
     margin-top: 2rem;
   }
+}
+
+/* Best Seller Section */
+
+.sectionHeading {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-semi-bold);
+}
+
+.productsWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 2rem;
 }

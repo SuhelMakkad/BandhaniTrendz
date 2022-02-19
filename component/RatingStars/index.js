@@ -10,7 +10,7 @@ export default function RatingStars({ totalStars, maxStars = 5 }) {
     const stars = [];
 
     for (let i = 0; i < Math.floor(numberOfStars); i++) {
-      stars.push(<Star key={i} />);
+      stars.push(<Star key={stars.length - 1} />);
     }
 
     if (Math.ceil(numberOfStars - Math.floor(numberOfStars)) > 0) {
@@ -18,7 +18,7 @@ export default function RatingStars({ totalStars, maxStars = 5 }) {
     }
 
     while (stars.length < maxStars) {
-      stars.push(<EmptyStar key={stars.length} />);
+      stars.push(<EmptyStar key={stars.length - 1} />);
     }
 
     setStarsToShow(stars);

@@ -72,31 +72,6 @@ export default function Home() {
         price: 1799,
       },
     ]);
-
-    if (!firstSection.current) return;
-    console.log(firstSection.current);
-
-    const sectionOneOptions = {
-      rootMargin: "0px 0px 0px 0px",
-      threshold: 1,
-    };
-
-    const sectionOneObserver = new IntersectionObserver((entries, sectionOneObserver) => {
-      entries.forEach((entry) => {
-        const nav = document.querySelector("nav");
-        if (!entry.isIntersecting) {
-          nav && nav.classList.add("active");
-          nav && nav.classList.remove("inactive");
-        } else {
-          nav && nav.classList.add("inactive");
-          nav && nav.classList.remove("active");
-        }
-      });
-    }, sectionOneOptions);
-
-    sectionOneObserver.observe(firstSection.current);
-
-    return () => sectionOneObserver.unobserve(firstSection.current);
   }, []);
 
   return (
@@ -107,7 +82,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar isTransparent={true} />
+      <Navbar firstSection={firstSection} isTransparent={true} />
 
       <main className={styles.main}>
         <section id={styles.heroSection} className="bg-gradient bg-pattern-1" ref={firstSection}>
@@ -124,7 +99,6 @@ export default function Home() {
                     ? heroImages.map((heroImage, i) => (
                         <div key={i} className={styles.imageWrapper}>
                           <Image
-                            priority={i === 0}
                             className={styles.heroImage}
                             src={heroImage.src}
                             width={350}

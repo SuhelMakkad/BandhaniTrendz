@@ -1,6 +1,5 @@
-const Star = ({ key = 0 }) => (
+const Star = () => (
   <svg
-    key={key}
     xmlns="http://www.w3.org/2000/svg"
     enableBackground="new 0 0 24 24"
     height="24px"
@@ -18,9 +17,8 @@ const Star = ({ key = 0 }) => (
   </svg>
 );
 
-const EmptyStar = ({ key = 0 }) => (
+const EmptyStar = () => (
   <svg
-    key={key}
     xmlns="http://www.w3.org/2000/svg"
     height="24px"
     viewBox="0 0 24 24"
@@ -32,9 +30,8 @@ const EmptyStar = ({ key = 0 }) => (
   </svg>
 );
 
-const HalfStar = ({ key = 0 }) => (
+const HalfStar = () => (
   <svg
-    key={key}
     xmlns="http://www.w3.org/2000/svg"
     height="24px"
     viewBox="0 0 24 24"
@@ -46,9 +43,8 @@ const HalfStar = ({ key = 0 }) => (
   </svg>
 );
 
-const AccountCircle = ({ key = 0 }) => (
+const AccountCircle = () => (
   <svg
-    key={key}
     xmlns="http://www.w3.org/2000/svg"
     height="24px"
     viewBox="0 0 24 24"

@@ -1,0 +1,30 @@
+.cardwrapper {
+  position: relative;
+  cursor: pointer;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.cardwrapper:hover .image {
+  transform: scale(1.1);
+}
+
+.image {
+  transition: transform 200ms ease;
+}
+
+.titleWrapper {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.26);
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: var(--fw-semi-bold);
+  font-size: 1.75rem;
+}

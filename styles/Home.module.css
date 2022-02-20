@@ -14,10 +14,16 @@
   color: #fff;
 }
 
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 2rem;
+}
+
 /* Herso Section */
 #heroSection {
   padding-top: 6rem;
-  --border-radius: 1.5rem;
 }
 
 .heroHeading {
@@ -88,13 +94,6 @@
   font-weight: var(--fw-semi-bold);
 }
 
-.productsWrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));
-  grid-auto-rows: 1fr;
-  gap: 2rem;
-}
-
 /* Information Section */
 
 .discription {
@@ -109,5 +108,5 @@
 
 .infoImage {
   border: 0.5rem solid white !important;
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
 }

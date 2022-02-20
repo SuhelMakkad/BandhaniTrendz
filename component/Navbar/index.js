@@ -26,7 +26,7 @@ export default function Navbar({ isTransparent, firstSection }) {
 
     sectionOneObserver.observe(firstSection.current);
 
-    return () => sectionOneObserver.unobserve(firstSection.current);
+    return () => sectionOneObserver && sectionOneObserver.unobserve(firstSection.current);
   }, []);
 
   return (

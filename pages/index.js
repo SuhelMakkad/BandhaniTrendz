@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Navbar from "../component/Navbar";
 import Carousel from "../component/Carousel";
+import CategoriesCard from "../component/CategoriesCard";
 import { useEffect, useRef, useState } from "react";
 
 import styles from "../styles/Home.module.css";
@@ -11,6 +12,7 @@ import Link from "next/link";
 export default function Home() {
   const [heroImages, setHeroImages] = useState([]);
   const [bestSellers, setBestSellers] = useState([]);
+  const [categories, setCategories] = useState([]);
   const firstSection = useRef(null);
 
   useEffect(() => {
@@ -72,6 +74,13 @@ export default function Home() {
         price: 1799,
       },
     ]);
+
+    setCategories([
+      { src: "/assets/images/saree_4.jpeg", title: "bandhani dupatta" },
+      { src: "/assets/images/dupata_2.jpeg", title: "bandhani dress" },
+      { src: "/assets/images/dress_5.jpeg", title: "bandhani fabric" },
+      { src: "/assets/images/saree_6.jpeg", title: "bandhani saree" },
+    ]);
   }, []);
 
   return (
@@ -119,7 +128,7 @@ export default function Home() {
           <div className="wrapper">
             <h4 className={styles.sectionHeading + " " + styles.textDark}>best sellers</h4>
 
-            <div className={styles.productsWrapper}>
+            <div className={styles.cardsGrid}>
               {bestSellers.map((bestSeller, i) => (
                 <Link href={`product/${i}`} key={i}>
                   <a>
@@ -158,6 +167,22 @@ export default function Home() {
                   </span>
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id={styles.infoSection}>
+          <div className="wrapper">
+            <h4 className={styles.sectionHeading + " " + styles.textDark}>categories</h4>
+
+            <div className={styles.cardsGrid}>
+              {categories.map((category, i) => (
+                <Link href={`categories/${i}`} key={i}>
+                  <a>
+                    <CategoriesCard category={category} />
+                  </a>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

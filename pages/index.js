@@ -86,7 +86,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <section id={styles.heroSection} className="bg-gradient bg-pattern-1" ref={firstSection}>
-          <div className="wrapper two-section-wrapper ">
+          <div className="wrapper two-section-wrapper">
             <div className="left left-60">
               <h2 className={styles.heroHeading}>Wide Range of Classic BANDHAJ Apparels</h2>
               <button className={"btn " + styles.exploreBtn}>Explore Now</button>
@@ -117,7 +117,7 @@ export default function Home() {
 
         <section id={styles.bestSellesrSection}>
           <div className="wrapper">
-            <h4 className={styles.sectionHeading + " " + styles.headingDark}>best sellers</h4>
+            <h4 className={styles.sectionHeading + " " + styles.textDark}>best sellers</h4>
 
             <div className={styles.productsWrapper}>
               {bestSellers.map((bestSeller, i) => (
@@ -127,6 +127,37 @@ export default function Home() {
                   </a>
                 </Link>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id={styles.infoSection} className="bg-gradient">
+          <div className="wrapper">
+            <h4 className={styles.sectionHeading + " " + styles.textLight}>bandhaj</h4>
+
+            <div className="two-section-wrapper">
+              <div className="left">
+                <Image
+                  className={styles.infoImage}
+                  src="/assets/images/info.jfif"
+                  width={525}
+                  height={350}
+                  layout="intrinsic"
+                />
+              </div>
+              <div className="right">
+                <p className={styles.discription + " " + styles.textLight}>
+                  <span>
+                    The technique involves dyeing a fabric which is tied tightly with a thread at
+                    several points, thus producing a variety of patterns like Chandrakala, Bavan
+                    Baug, Shikari etcetera; depending on the manner in which the cloth is tied.
+                  </span>
+                  <span>
+                    Earliest evidence of Bandhani dates back to Indus Valley Civilization suggest
+                    that dyeing was done as early as 4000 B.C.
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
         </section>

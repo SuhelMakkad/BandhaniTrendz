@@ -1,7 +1,18 @@
 /*
+- General
 - Herso Section 
 - Best Seller Section
+- Information Section
 */
+
+/* General */
+.textDark {
+  color: #000;
+}
+
+.textLight {
+  color: #fff;
+}
 
 /* Herso Section */
 #heroSection {
@@ -82,4 +93,21 @@
   grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));
   grid-auto-rows: 1fr;
   gap: 2rem;
+}
+
+/* Information Section */
+
+.discription {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.discription span {
+  display: block;
+  padding: 1rem;
+}
+
+.infoImage {
+  border: 0.5rem solid white !important;
+  border-radius: 1rem;
 }

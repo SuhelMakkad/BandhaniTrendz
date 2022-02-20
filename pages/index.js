@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "../component/Navbar";
 import Carousel from "../component/Carousel";
 import CategoriesCard from "../component/CategoriesCard";
+import Footer from "../component/Footer";
 import { useEffect, useRef, useState } from "react";
 
 import styles from "../styles/Home.module.css";
@@ -108,6 +109,7 @@ export default function Home() {
                     ? heroImages.map((heroImage, i) => (
                         <div key={i} className={styles.imageWrapper}>
                           <Image
+                            priority={i < 2}
                             className={styles.heroImage}
                             src={heroImage.src}
                             width={350}
@@ -187,6 +189,8 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }

@@ -7,14 +7,7 @@ export default function ProductCard({ product }) {
   return (
     <div className={styles.peoductCard}>
       <div className={styles.imageWrapper}>
-        <Image
-          className={styles.image}
-          src={product.src}
-          alt={product.title}
-          height={350}
-          width={250}
-          layout="fill"
-        />
+        <Image className={styles.image} src={product.src} alt={product.title} layout="fill" />
       </div>
 
       <div className={styles.details}>

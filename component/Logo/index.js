@@ -2,13 +2,17 @@ import Link from "next/link";
 
 import styles from "./Logo.module.css";
 
-export default function Logo() {
+export default function Logo({ className, fontSize }) {
   return (
     <Link href="/">
-      <a>
+      <a className={className}>
         <h1 className={styles.logoWrapper}>
-          <span className={styles.first}>BANDHANI</span>
-          <span className={styles.second}>TRENDZ</span>
+          <span style={{ fontSize }} className={styles.first}>
+            BANDHANI
+          </span>
+          <span style={{ fontSize }} className={styles.second}>
+            TRENDZ
+          </span>
         </h1>
       </a>
     </Link>

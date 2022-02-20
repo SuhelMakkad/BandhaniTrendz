@@ -50,3 +50,12 @@
 .socialIcon:hover {
   opacity: 0.7;
 }
+
+@media (max-width: 450px) {
+  .footerLink {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    order: -1;
+  }
+}

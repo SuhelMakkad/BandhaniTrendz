@@ -173,6 +173,7 @@ nav.inactive {
   .two-section-wrapper {
     flex-direction: column;
     justify-content: center;
+    gap: 5rem;
   }
 
   .two-section-wrapper .right,

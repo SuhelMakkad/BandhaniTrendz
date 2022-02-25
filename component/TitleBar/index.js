@@ -3,11 +3,13 @@ import styles from "./TitleBar.module.css";
 export default function TitleBar({ items }) {
   return items ? (
     <div className="bg-primary">
-      <div className={`wrapper ${styles.wrapper}`}>
+      <ul className={`wrapper ${styles.list}`}>
         {items.map((item, i) => (
-          <span key={i}>{item}</span>
+          <li className={styles.item} key={i}>
+            {item}
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   ) : (
     ""

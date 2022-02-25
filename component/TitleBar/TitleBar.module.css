@@ -1,4 +1,4 @@
-.wrapper {
+.list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,4 +8,12 @@
   font-weight: var(--fw-medium);
   padding-top: 0.85em;
   padding-bottom: 0.85em;
+}
+
+.item {
+  cursor: pointer;
+}
+
+.item:hover {
+  font-weight: var(--fw-semi-bold);
 }

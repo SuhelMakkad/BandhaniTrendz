@@ -33,11 +33,11 @@ export default function Navbar({ isTransparent, isActive }) {
           </li>
           <li
             className={
-              styles.navItem + " " + (router.asPath === "/catagories" ? styles.active : "")
+              styles.navItem + " " + (router.asPath === "/categories" ? styles.active : "")
             }
           >
-            <Link href="/catagories">
-              <a>Catagories</a>
+            <Link href="/categories">
+              <a>Categories</a>
             </Link>
           </li>
           <li

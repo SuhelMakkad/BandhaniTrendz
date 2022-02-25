@@ -194,7 +194,7 @@ export default function Catagories() {
           <div className="wrapper pt-0">
             <div className={styles.filterWrapper}>
               <button id={styles.filterBtn}>filters</button>
-              <span className={styles.filterItems}>Catagory: All</span>
+              <span className={styles.filterItems}>Category: All</span>
               <span className={styles.filterItems}>Sort by: Popularity</span>
             </div>
 

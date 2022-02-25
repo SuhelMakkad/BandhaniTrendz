@@ -42,7 +42,7 @@
 .navItem {
   margin-right: 2rem;
   font-size: 1.025rem;
-  transition: transform 200ms ease-in;
+  transition: transform 100ms ease-in;
 }
 
 .navItem:hover {

@@ -11,8 +11,8 @@ export default function Navbar({ isTransparent, isActive }) {
 
   return (
     <nav
-      className={`${styles.nav} ${isActive ? "inactive" : "active"} ${
-        isTransparent ? "" : "bg-gradient"
+      className={`${styles.nav} ${
+        isTransparent ? (isActive ? "inactive" : "active") : "bg-gradient"
       }  ${isOpen ? styles.open : ""}`}
     >
       <div className={"wrapper " + styles.navWrapper}>

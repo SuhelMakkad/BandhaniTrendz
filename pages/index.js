@@ -115,12 +115,17 @@ export default function Home() {
       <Navbar isActive={isIntersecting} isTransparent={true} />
 
       <main className={styles.main}>
-        <section id={styles.heroSection} className="bg-gradient bg-pattern-1" ref={firstSection}>
+        <section
+          id={styles.heroSection}
+          className="bg-gradient bg-pattern-1"
+          ref={firstSection}
+          aria-describedby="Main section"
+        >
           <div className="wrapper two-section-wrapper">
-            <div className="left left-60">
-              <h2 className={styles.heroHeading}>Wide Range of Classic BANDHAJ Apparels</h2>
-              <button className={"btn " + styles.exploreBtn}>Explore Now</button>
-            </div>
+            <header className="left left-60">
+              <h2 id={styles.heroHeading}>Wide Range of Classic BANDHAJ Apparels</h2>
+            </header>
+            <button className={"btn " + styles.exploreBtn}>Explore Now</button>
 
             <div className="right right-40">
               <div className={styles.carouselWrapper}>
@@ -146,9 +151,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id={styles.bestSellesrSection}>
+        <section aria-describedby="Best sellers" id={styles.bestSellesrSection}>
           <div className="wrapper">
-            <h4 className={styles.sectionHeading + " " + styles.textDark}>best sellers</h4>
+            <header>
+              <h4 className={styles.sectionHeading + " " + styles.textDark}>best sellers</h4>
+            </header>
 
             <div className={styles.cardsGrid}>
               {bestSellers.map((bestSeller, i) => (
@@ -162,9 +169,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section id={styles.infoSection} className="bg-gradient">
+        <section
+          aria-describedby="Information about Bandhaj art"
+          id={styles.infoSection}
+          className="bg-gradient"
+        >
           <div className="wrapper">
-            <h4 className={styles.sectionHeading + " " + styles.textLight}>bandhaj</h4>
+            <header>
+              <h4 className={styles.sectionHeading + " " + styles.textLight}>bandhaj</h4>
+            </header>
 
             <div className="two-section-wrapper">
               <div className="left">
@@ -193,9 +206,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id={styles.infoSection}>
+        <section aria-describedby="Categories" id={styles.infoSection}>
           <div className="wrapper">
-            <h4 className={styles.sectionHeading + " " + styles.textDark}>categories</h4>
+            <header>
+              <h4 className={styles.sectionHeading + " " + styles.textDark}>categories</h4>
+            </header>
 
             <div className={styles.cardsGrid}>
               {categories.map((category, i) => (

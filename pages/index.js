@@ -122,10 +122,12 @@ export default function Home() {
           aria-describedby="Main section"
         >
           <div className="wrapper two-section-wrapper">
-            <header className="left left-60">
-              <h2 id={styles.heroHeading}>Wide Range of Classic BANDHAJ Apparels</h2>
-            </header>
-            <button className={"btn " + styles.exploreBtn}>Explore Now</button>
+            <div className="left left-60">
+              <header>
+                <h2 id={styles.heroHeading}>Wide Range of Classic BANDHAJ Apparels</h2>
+              </header>
+              <button className={"btn " + styles.exploreBtn}>Explore Now</button>
+            </div>
 
             <div className="right right-40">
               <div className={styles.carouselWrapper}>

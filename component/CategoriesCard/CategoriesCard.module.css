@@ -23,6 +23,7 @@
 }
 
 .title {
+  width: min-content; /* to have one word in one line */
   color: #fff;
   text-transform: uppercase;
   font-weight: var(--fw-semi-bold);

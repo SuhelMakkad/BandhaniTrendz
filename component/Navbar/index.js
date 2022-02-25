@@ -1,37 +1,17 @@
 import Logo from "../Logo";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import styles from "./Navbar.module.css";
 
-export default function Navbar({ isTransparent, firstSection }) {
+export default function Navbar({ isTransparent, isActive }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isIntersecting, setIsIntersecting] = useState(false);
   const router = useRouter();
-
-  useEffect(() => {
-    if (!(firstSection || firstSection.current)) return;
-
-    const sectionOneOptions = {
-      rootMargin: "0px 0px 0px 0px",
-      threshold: 1,
-    };
-
-    const sectionOneObserver = new IntersectionObserver((entries, sectionOneObserver) => {
-      entries.forEach((entry) => {
-        setIsIntersecting(entry.isIntersecting);
-      });
-    }, sectionOneOptions);
-
-    sectionOneObserver.observe(firstSection.current);
-
-    return () => sectionOneObserver && sectionOneObserver.unobserve(firstSection.current);
-  }, []);
 
   return (
     <nav
-      className={`${styles.nav} ${isIntersecting ? "inactive" : "active"} ${
+      className={`${styles.nav} ${isActive ? "inactive" : "active"} ${
         isTransparent ? "" : "bg-gradient"
       }  ${isOpen ? styles.open : ""}`}
     >

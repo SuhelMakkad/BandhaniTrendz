@@ -4,7 +4,7 @@ import Navbar from "../component/Navbar";
 import Carousel from "../component/Carousel";
 import CategoriesCard from "../component/CategoriesCard";
 import Footer from "../component/Footer";
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useEffect, useRef, useState } from "react";
 
 import styles from "../styles/Home.module.css";
 import ProductCard from "../component/ProductCard";
@@ -14,7 +14,27 @@ export default function Home() {
   const [heroImages, setHeroImages] = useState([]);
   const [bestSellers, setBestSellers] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [isIntersecting, setIsIntersecting] = useState(false);
   const firstSection = useRef(null);
+
+  useLayoutEffect(() => {
+    if (!(firstSection && firstSection.current)) return;
+
+    const sectionOneOptions = {
+      rootMargin: "0px 0px 0px 0px",
+      threshold: 1,
+    };
+
+    const sectionOneObserver = new IntersectionObserver((entries, sectionOneObserver) => {
+      entries.forEach((entry) => {
+        setIsIntersecting(entry.isIntersecting);
+      });
+    }, sectionOneOptions);
+
+    sectionOneObserver.observe(firstSection.current);
+
+    return () => sectionOneObserver && sectionOneObserver.unobserve(firstSection.current);
+  }, []);
 
   useEffect(() => {
     setHeroImages([
@@ -92,7 +112,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar firstSection={firstSection} isTransparent={true} />
+      <Navbar isActive={isIntersecting} isTransparent={true} />
 
       <main className={styles.main}>
         <section id={styles.heroSection} className="bg-gradient bg-pattern-1" ref={firstSection}>

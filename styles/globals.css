@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800&display=swap");
 
 :root {
+  --bg-primary: #fff;
+  --bg-secondary: #eaeaea;
+
   --max-width: 1400px;
   --margin-x: 2.5rem;
   --margin-y: 1.5rem;
@@ -62,11 +65,6 @@ button {
   cursor: pointer;
 }
 
-section {
-  margin: auto;
-  padding: 6rem 0;
-}
-
 nav.active {
   background: rgba(0, 0, 0, 0.55);
   animation: fadeIn 500ms ease-in-out;
@@ -99,6 +97,14 @@ nav.inactive {
   max-width: var(--max-width);
   margin: auto;
   padding: 1.5rem var(--margin-x);
+}
+
+.bg-secondary {
+  background-color: #eaeaea;
+}
+
+.bg-primary {
+  background-color: #fff;
 }
 
 .bg-gradient {
@@ -163,6 +169,46 @@ nav.inactive {
 .swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
   background: white !important;
+}
+
+.mt-0,
+.my-0 {
+  margin-top: 0;
+}
+
+.mb-0,
+.my-0 {
+  margin-bottom: 0;
+}
+
+.ml-0,
+.mx-0 {
+  margin-left: 0;
+}
+
+.mr-0,
+.mx-0 {
+  margin-right: 0;
+}
+
+.pt-0,
+.py-0 {
+  padding-top: 0;
+}
+
+.pb-0,
+.py-0 {
+  padding-bottom: 0;
+}
+
+.pl-0,
+.px-0 {
+  padding-left: 0;
+}
+
+.pr-0,
+.px-0 {
+  padding-right: 0;
 }
 
 @media (max-width: 900px) {

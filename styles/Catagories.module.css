@@ -1,0 +1,86 @@
+.main {
+  --padding: 0.75rem;
+}
+
+.titleLine {
+  text-align: center;
+  font-weight: var(--fw-medium);
+  padding-bottom: 0.75rem;
+}
+
+.carouselWrapper {
+  height: 300px;
+  padding: var(--padding);
+  background-color: var(--bg-primary);
+}
+
+.imageWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.imageTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: #fff;
+  z-index: 1;
+  font-size: 2.2rem;
+  font-weight: var(--fw-semi-bold);
+  text-transform: uppercase;
+}
+
+.filterWrapper {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+
+  background-color: var(--bg-primary);
+  padding: var(--padding);
+  padding-left: 1rem;
+}
+
+#filterBtn {
+  background-color: #ff6060e0;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  transition: background-color 200ms ease;
+}
+
+#filterBtn:hover {
+  background-color: #ff6060;
+}
+
+.filterItems {
+  font-weight: var(--fw-medium);
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.filterItems::before {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: -1.1rem;
+  transform: translateY(-50%);
+  background-color: #000;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}

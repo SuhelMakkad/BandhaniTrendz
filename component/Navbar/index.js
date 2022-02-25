@@ -1,6 +1,6 @@
 import Logo from "../Logo";
 import Link from "next/link";
-import { useLayoutEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 
 import styles from "./Navbar.module.css";
@@ -11,6 +11,7 @@ export default function Navbar({ isTransparent, isActive }) {
 
   return (
     <nav
+      style={{ position: isTransparent ? "" : "sticky" }}
       className={`${styles.nav} ${
         isTransparent ? (isActive ? "inactive" : "active") : "bg-gradient"
       }  ${isOpen ? styles.open : ""}`}

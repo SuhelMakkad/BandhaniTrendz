@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "../component/Footer";
 import Navbar from "../component/Navbar";
 import styles from "../styles/Catagories.module.css";
 
@@ -11,9 +12,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
+      <Navbar isTransparent={false} />
 
       <main className={styles.main}></main>
+
+      <Footer />
     </div>
   );
 }

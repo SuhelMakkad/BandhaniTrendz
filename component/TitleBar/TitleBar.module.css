@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-medium);
+  padding-top: 0.85em;
+  padding-bottom: 0.85em;
+}

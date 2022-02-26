@@ -20,7 +20,12 @@ export default function Catagories() {
 
   const descriptionInput = useRef(null);
 
-  const catagories = ["saree", "dress", "fabric", "dupata"];
+  const catagories = [
+    { title: "saree", url: "/categories?type=saree" },
+    { title: "dress", url: "/categories?type=dress" },
+    { title: "fabric", url: "/categories?type=fabric" },
+    { title: "dupata", url: "/categories?type=dupata" },
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();

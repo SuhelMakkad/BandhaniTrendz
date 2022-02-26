@@ -1,0 +1,35 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: var(--fw-semi-bold);
+  color: rgb(156, 155, 155);
+}
+
+#shareBtnWrapper {
+  background-color: rgb(233, 233, 233);
+  display: block;
+  border-radius: 50%;
+  padding: 0.2rem;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+#shareBtnWrapper:hover {
+  background-color: rgb(212, 212, 212);
+}
+
+#productName {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: var(--fw-medium);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}

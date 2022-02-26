@@ -7,6 +7,7 @@ import Carousel from "../../component/Carousel";
 import Navbar from "../../component/Navbar";
 import TitleBar from "../../component/TitleBar";
 import ProductImages from "../../component/ProductImages";
+import ProductDescription from "../../component/ProductDescription";
 import Footer from "../../component/Footer";
 
 import styles from "../../styles/Product.module.css";
@@ -63,7 +64,9 @@ export default function Product() {
               <div className={styles.productImages}>
                 <ProductImages images={productImages} />
               </div>
-              <div className={styles.productDescription}></div>
+              <div className={styles.productDescription}>
+                <ProductDescription />
+              </div>
             </div>
           </div>
         </section>

@@ -1,5 +1,7 @@
-const Star = () => (
+const Star = ({ className, size }) => (
   <svg
+    style={{ width: size, height: size }}
+    className={className}
     xmlns="http://www.w3.org/2000/svg"
     enableBackground="new 0 0 24 24"
     height="24px"
@@ -17,8 +19,9 @@ const Star = () => (
   </svg>
 );
 
-const EmptyStar = () => (
+const EmptyStar = ({ className }) => (
   <svg
+    className={className}
     xmlns="http://www.w3.org/2000/svg"
     height="24px"
     viewBox="0 0 24 24"
@@ -30,8 +33,9 @@ const EmptyStar = () => (
   </svg>
 );
 
-const HalfStar = () => (
+const HalfStar = ({ className }) => (
   <svg
+    className={className}
     xmlns="http://www.w3.org/2000/svg"
     height="24px"
     viewBox="0 0 24 24"
@@ -43,8 +47,9 @@ const HalfStar = () => (
   </svg>
 );
 
-const AccountCircle = () => (
+const AccountCircle = ({ className }) => (
   <svg
+    className={className}
     xmlns="http://www.w3.org/2000/svg"
     height="24px"
     viewBox="0 0 24 24"
@@ -56,8 +61,9 @@ const AccountCircle = () => (
   </svg>
 );
 
-const LogoBox = ({ size = 210 }) => (
+const LogoBox = ({ className, size = 210 }) => (
   <svg
+    className={className}
     style={{ width: size, height: size }}
     width="209.282"
     height="209.826"
@@ -86,4 +92,16 @@ const LogoBox = ({ size = 210 }) => (
   </svg>
 );
 
-export { Star, EmptyStar, HalfStar, AccountCircle, LogoBox };
+const Share = ({ className, size = 24 }) => (
+  <svg
+    className={className}
+    style={{ width: size, height: size }}
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+  >
+    <path d="M14,9V5l7,7-7,7V14.9c-5,0-8.5,1.6-11,5.1C4,15,7,10,14,9Z" />
+  </svg>
+);
+
+export { Star, EmptyStar, HalfStar, AccountCircle, LogoBox, Share };

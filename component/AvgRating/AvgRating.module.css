@@ -1,0 +1,16 @@
+.ratings {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  padding: 0.25rem 0.2rem 0.4rem 0.4rem;
+  background-color: #388e3c;
+  border-radius: 0.35rem;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: var(--fw-medium);
+}
+.star {
+  fill: #fff;
+  height: 16px;
+  transform: translateY(2px);
+}

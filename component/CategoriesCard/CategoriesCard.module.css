@@ -3,6 +3,7 @@
   cursor: pointer;
   border-radius: 1rem;
   overflow: hidden;
+  height: var(--cards-height);
 }
 
 .cardwrapper:hover .image {

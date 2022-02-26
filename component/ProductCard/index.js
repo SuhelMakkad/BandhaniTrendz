@@ -3,9 +3,9 @@ import RatingStars from "../RatingStars";
 
 import styles from "./ProductCard.module.css";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, bgSolid = false }) {
   return (
-    <div className={styles.peoductCard}>
+    <div className={styles.peoductCard + " " + (bgSolid ? styles.bgSolid : "")}>
       <div className={styles.imageWrapper}>
         <Image className={styles.image} src={product.src} alt={product.title} layout="fill" />
       </div>

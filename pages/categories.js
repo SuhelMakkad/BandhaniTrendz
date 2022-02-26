@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import Head from "next/head";
 import Image from "next/image";
@@ -15,8 +15,24 @@ import styles from "../styles/Catagories.module.css";
 export default function Catagories() {
   const [headerImages, setHeaderImages] = useState([]);
   const [bestSellers, setBestSellers] = useState([]);
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const descriptionInput = useRef(null);
 
   const catagories = ["saree", "dress", "fabric", "dupata"];
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const handleDescriptionChange = (e) => {
+    const target = e.target;
+    setMessage(target.value);
+
+    target.style.height = "auto";
+    target.style.height = (target.scrollHeight < 100 ? 100 : target.scrollHeight + 10) + "px";
+  };
 
   useEffect(() => {
     setHeaderImages([
@@ -177,8 +193,6 @@ export default function Catagories() {
                           priority={i < 2}
                           className={styles.image}
                           src={image.src}
-                          width={350}
-                          height={300}
                           layout="fill"
                         />
                         <span className={styles.imageTitle}>{image.title}</span>
@@ -202,10 +216,44 @@ export default function Catagories() {
               {bestSellers.map((bestSeller, i) => (
                 <Link href={`product/${i}`} key={i}>
                   <a>
-                    <ProductCard product={bestSeller} />
+                    <ProductCard product={bestSeller} bgSolid={true} />
                   </a>
                 </Link>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section aria-describedby="Get in touch!" id={styles.contact}>
+          <div className="wrapper">
+            <div className={styles.contactWrapper}>
+              <header>
+                <h4 className={styles.sectionHeading}>Looking for Somthing Else?</h4>
+              </header>
+              <div>
+                <p className={styles.subHeading}>Get in touch</p>
+                <form className={styles.contactForm} onSubmit={handleSubmit}>
+                  <input
+                    className={styles.formInputs}
+                    id={styles.emailInput}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your e-mail or phone number"
+                    type="email"
+                  />
+                  <textarea
+                    ref={descriptionInput}
+                    className={styles.formInputs}
+                    id={styles.descriptionInput}
+                    value={message}
+                    onChange={handleDescriptionChange}
+                    placeholder="Enter your message"
+                  />
+                  <button type="submit" id={styles.submitContactFormBtn}>
+                    Submit
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </section>

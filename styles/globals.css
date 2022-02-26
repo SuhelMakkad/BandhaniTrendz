@@ -11,6 +11,8 @@
 
   --border-radius: 1.5rem;
 
+  --ff-san-serif: "Montserrat", sans-serif;
+
   --fw-thin: 100;
   --fw-light: 300;
   --fw-regular: 400;
@@ -19,6 +21,8 @@
   --fw-bold: 700;
   --fw-extra-bold: 800;
   --fw-black: 900;
+
+  --cards-height: 275px;
 }
 
 ::-webkit-scrollbar {
@@ -43,7 +47,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--ff-san-serif);
   scroll-behavior: smooth;
 }
 

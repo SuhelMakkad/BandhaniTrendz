@@ -1,18 +1,25 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
-import Image from "next/image";
 
 import styles from "./Carousel.module.css";
 import "swiper/css";
 import "swiper/css/pagination";
 
-export default function Carousel({ children }) {
+export default function Carousel({
+  children,
+  spaceBetween = 30,
+  slidesPerView = 1,
+  slidesPerGroup = 1,
+  showPagination = true,
+}) {
   return (
     <>
       <Swiper
         className="mySwiper"
-        spaceBetween={30}
-        modules={[Pagination]}
+        slidesPerView={slidesPerView}
+        slidesPerGroup={slidesPerGroup}
+        spaceBetween={spaceBetween}
+        modules={showPagination ? [Pagination] : []}
         pagination={{
           dynamicBullets: true,
         }}

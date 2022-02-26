@@ -181,7 +181,7 @@ export default function Catagories() {
 
       <TitleBar items={catagories} />
 
-      <main className={styles.main + " bg-secondary"}>
+      <main className={styles.main}>
         <p className={`wrapper ${styles.titleLine}`}>
           Earliest evidence of Bandhani dates back to Indus Valley Civilization suggest that dyeing
           was done as early as 4000 B.C.

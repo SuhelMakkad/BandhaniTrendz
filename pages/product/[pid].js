@@ -1,18 +1,39 @@
-import Head from "next/head";
+import { useEffect, useState } from "react";
 
-import Footer from "../../component/Footer";
+import Head from "next/head";
+import Image from "next/image";
+
+import Carousel from "../../component/Carousel";
 import Navbar from "../../component/Navbar";
 import TitleBar from "../../component/TitleBar";
+import Footer from "../../component/Footer";
 
 import styles from "../../styles/Product.module.css";
 
 export default function Product() {
+  const [exploreImages, setExploreImages] = useState([]);
+
   const catagories = [
     { title: "saree", url: "/categories?type=saree" },
     { title: "dress", url: "/categories?type=dress" },
     { title: "fabric", url: "/categories?type=fabric" },
     { title: "dupata", url: "/categories?type=dupata" },
   ];
+
+  useEffect(() => {
+    setExploreImages([
+      { src: "/assets/images/saree_4.jpeg", title: "SAREE 1" },
+      { src: "/assets/images/dress_5.jpeg", title: "SAREE 3" },
+      { src: "/assets/images/saree_6.jpeg", title: "SAREE 4" },
+      { src: "/assets/images/saree_4.jpeg", title: "SAREE 1" },
+      { src: "/assets/images/dupata_2.jpeg", title: "SAREE 4" },
+      { src: "/assets/images/saree_4.jpeg", title: "SAREE 1" },
+      { src: "/assets/images/saree_6.jpeg", title: "SAREE 4" },
+      { src: "/assets/images/dress_5.jpeg", title: "SAREE 3" },
+      { src: "/assets/images/saree_6.jpeg", title: "SAREE 4" },
+      { src: "/assets/images/dress_5.jpeg", title: "SAREE 3" },
+    ]);
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -26,7 +47,43 @@ export default function Product() {
 
       <TitleBar items={catagories} />
 
-      <main className={styles.main}></main>
+      <main className={styles.main}>
+        <section aria-describedby="product deatils" id={styles.productSeection}>
+          <div className="wrapper">
+            <div className={styles.productWrapper}></div>
+          </div>
+        </section>
+
+        <section aria-describedby="more items to explore" id={styles.exploreSection}>
+          <div className="wrapper pt-0">
+            <div className={styles.exploreWrapper}>
+              <header>
+                <h6 id={styles.exploreHeader}>More items to explore</h6>
+              </header>
+
+              <div className={styles.exploreCarousel}>
+                <Carousel slidesPerView={5} spaceBetween={15} showPagination={false}>
+                  {exploreImages && exploreImages.length
+                    ? exploreImages.map((exploreImage, i) => (
+                        <div key={i} className={styles.imageWrapper}>
+                          <Image
+                            priority={i < 2}
+                            className={styles.exploreImage}
+                            src={exploreImage.src}
+                            width={400}
+                            height={450}
+                            layout="responsive"
+                          />
+                          <span className={styles.exploreImageTitle}>{exploreImage.title}</span>
+                        </div>
+                      ))
+                    : ["Loading..."]}
+                </Carousel>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
 
       <Footer />
     </div>

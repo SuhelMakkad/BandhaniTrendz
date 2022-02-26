@@ -8,6 +8,21 @@
   padding: 1rem;
 }
 
+.productWrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.productImages,
+.productDescription {
+  width: 50%;
+}
+
+#getItBtn {
+  background-color: #ff9f00;
+  color: #fff;
+}
+
 #exploreHeader {
   font-size: 1.1rem;
   font-weight: var(--fw-medium);

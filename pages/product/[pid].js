@@ -6,11 +6,13 @@ import Image from "next/image";
 import Carousel from "../../component/Carousel";
 import Navbar from "../../component/Navbar";
 import TitleBar from "../../component/TitleBar";
+import ProductImages from "../../component/ProductImages";
 import Footer from "../../component/Footer";
 
 import styles from "../../styles/Product.module.css";
 
 export default function Product() {
+  const [productImages, setProductImages] = useState([]);
   const [exploreImages, setExploreImages] = useState([]);
 
   const catagories = [
@@ -33,6 +35,13 @@ export default function Product() {
       { src: "/assets/images/saree_6.jpeg", title: "SAREE 4" },
       { src: "/assets/images/dress_5.jpeg", title: "SAREE 3" },
     ]);
+
+    setProductImages([
+      "/assets/images/saree_4.jpeg",
+      "/assets/images/dress_5.jpeg",
+      "/assets/images/saree_6.jpeg",
+      "/assets/images/dupata_2.jpeg",
+    ]);
   }, []);
 
   return (
@@ -50,7 +59,12 @@ export default function Product() {
       <main className={styles.main}>
         <section aria-describedby="product deatils" id={styles.productSeection}>
           <div className="wrapper">
-            <div className={styles.productWrapper}></div>
+            <div className={styles.productWrapper}>
+              <div className={styles.productImages}>
+                <ProductImages images={productImages} />
+              </div>
+              <div className={styles.productDescription}></div>
+            </div>
           </div>
         </section>
 
@@ -67,7 +81,6 @@ export default function Product() {
                     ? exploreImages.map((exploreImage, i) => (
                         <div key={i} className={styles.imageWrapper}>
                           <Image
-                            priority={i < 2}
                             className={styles.exploreImage}
                             src={exploreImage.src}
                             width={400}

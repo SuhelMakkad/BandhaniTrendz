@@ -10,12 +10,14 @@
 
 .productWrapper {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
-.productImages,
+.productImages {
+  width: 40%;
+}
 .productDescription {
-  width: 50%;
+  width: 60%;
 }
 
 #getItBtn {

@@ -19,8 +19,9 @@ const Star = ({ className, size }) => (
   </svg>
 );
 
-const EmptyStar = ({ className }) => (
+const EmptyStar = ({ className, size }) => (
   <svg
+    style={{ width: size, height: size }}
     className={className}
     xmlns="http://www.w3.org/2000/svg"
     height="24px"
@@ -33,8 +34,9 @@ const EmptyStar = ({ className }) => (
   </svg>
 );
 
-const HalfStar = ({ className }) => (
+const HalfStar = ({ className, size }) => (
   <svg
+    style={{ width: size, height: size }}
     className={className}
     xmlns="http://www.w3.org/2000/svg"
     height="24px"
@@ -47,10 +49,10 @@ const HalfStar = ({ className }) => (
   </svg>
 );
 
-const AccountCircle = ({ className }) => (
+const AccountCircle = ({ className, size }) => (
   <svg
     className={className}
-    xmlns="http://www.w3.org/2000/svg"
+    style={{ width: size, height: size }}
     height="24px"
     viewBox="0 0 24 24"
     width="24px"

@@ -1,3 +1,7 @@
+.wrapper {
+  --margin: 1rem;
+}
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -6,6 +10,12 @@
   font-size: 0.8rem;
   font-weight: var(--fw-semi-bold);
   color: rgb(156, 155, 155);
+}
+
+.divider {
+  display: block;
+  border-bottom: 1px solid #b7b7b7;
+  margin: var(--margin) 0;
 }
 
 #shareBtnWrapper {
@@ -22,14 +32,47 @@
 }
 
 #productName {
-  margin-top: 1rem;
-  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-size: 1.35rem;
   font-weight: var(--fw-medium);
 }
 
-.rating {
+.ratingTop {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: var(--fw-medium);
+}
+
+.avgRatingTop {
+  font-size: 0.875rem;
+}
+
+.price {
+  margin-top: var(--margin);
+  display: block;
+  font-size: 1.75rem;
+  font-weight: var(--fw-medium);
+}
+
+.detailsWrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.deatilsList {
+  font-size: 1.075rem;
+  text-transform: capitalize;
+}
+
+.sectionHeading {
+  font-weight: var(--fw-semi-bold);
+  font-size: 1.175rem;
+  margin-bottom: 0.5rem;
+}
+
+.userReviewsWrapper {
+  margin: 1.2rem 0;
 }

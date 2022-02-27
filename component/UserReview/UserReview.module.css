@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.profilePic svg {
+  fill: rgb(0, 0, 0);
+  transform: translateY(1px);
+}
+
+.ratingStarsWrapper {
+  transform: translateY(-3px);
+}
+
+.name {
+  font-size: 1.05rem;
+  font-weight: var(--fw-medium);
+  margin: 0 0.5rem 0 0.35rem;
+  text-transform: capitalize;
+}
+
+.reviewText {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}

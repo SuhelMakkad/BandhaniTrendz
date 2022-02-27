@@ -1,0 +1,51 @@
+.ratingStatWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ratingNum {
+  font-size: 0.9rem;
+}
+
+.starSvg {
+  margin: 0 0.45rem 0 0.22rem;
+}
+
+.ratingBarWrapper {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.ratingBar,
+.ratingBarDisabled {
+  width: 100%;
+  position: relative;
+  height: 0.3rem;
+  background-color: rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+.ratingBar {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.ratingBarDisabled {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.reviewCount {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.ratingBar.active.good {
+  background-color: #388e3c;
+}
+.ratingBar.active.avg {
+  background-color: #fff9a0;
+}
+.ratingBar.active.bad {
+  background-color: #ff6161;
+}

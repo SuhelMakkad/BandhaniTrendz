@@ -86,6 +86,7 @@ export default function ProductDescription() {
       <div className={styles.reviewsWrapper}>
         <p className={styles.sectionHeading}>Customer Reviews</p>
         <ReviewsOverview />
+        <span className={styles.divider}></span>
 
         <div className={styles.userReviewsWrapper}>
           <UserReview

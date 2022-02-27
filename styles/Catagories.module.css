@@ -51,7 +51,6 @@
   color: #fff;
   font-size: 1rem;
   text-transform: capitalize;
-  letter-spacing: 1px;
   transition: background-color 200ms ease;
 }
 
@@ -136,7 +135,6 @@
   width: min-content;
   background-color: #0084ffd5;
   color: #fff;
-  letter-spacing: 1px;
   transition: background-color 200ms ease;
 }
 

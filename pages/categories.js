@@ -41,10 +41,14 @@ export default function Catagories() {
 
   useEffect(() => {
     setHeaderImages([
-      { src: "/assets/images/saree_4.jpeg", title: "saree" },
-      { src: "/assets/images/dupata_2.jpeg", title: "dupata" },
-      { src: "/assets/images/dress_5.jpeg", title: "dress" },
-      { src: "/assets/images/saree_6.jpeg", title: "fabric" },
+      {
+        src: "/assets/images/saree_4.jpeg",
+        title: "bandhani dupatta",
+        link: "/categories?dupatta",
+      },
+      { src: "/assets/images/dupata_2.jpeg", title: "bandhani dress", link: "/categories?dress" },
+      { src: "/assets/images/dress_5.jpeg", title: "bandhani fabric", link: "/categories?fabric" },
+      { src: "/assets/images/saree_6.jpeg", title: "bandhani saree", link: "/categories?saree" },
     ]);
 
     setBestSellers([
@@ -193,15 +197,17 @@ export default function Catagories() {
               <Carousel>
                 {headerImages && headerImages.length
                   ? headerImages.map((image, i) => (
-                      <div key={i} className={styles.imageWrapper}>
-                        <Image
-                          priority={i < 2}
-                          className={styles.image}
-                          src={image.src}
-                          layout="fill"
-                        />
-                        <span className={styles.imageTitle}>{image.title}</span>
-                      </div>
+                      <Link href={image.link} key={i} className={styles.imageWrapper}>
+                        <a>
+                          <Image
+                            priority={i < 2}
+                            className={styles.image}
+                            src={image.src}
+                            layout="fill"
+                          />
+                          <span className={styles.imageTitle}>{image.title}</span>
+                        </a>
+                      </Link>
                     ))
                   : ["Loading..."]}
               </Carousel>

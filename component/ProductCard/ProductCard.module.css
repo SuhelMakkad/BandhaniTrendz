@@ -7,8 +7,18 @@
   cursor: pointer;
 }
 
+.bgSolids .peoductCard {
+  box-shadow: var(--box-shadow);
+  transition: box-shadow 200ms ease-in;
+}
+
+.bgSolids .peoductCard:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
 .peoductCard:hover .image {
   transform: scale(1.1);
+  box-shadow: var(--box-shadow-hover);
 }
 
 .imageWrapper {
@@ -22,7 +32,7 @@
 
 .bgSolid .imageWrapper {
   box-shadow: none;
-  height: calc(var(--cards-height) / 1.05);
+  height: calc(var(--cards-height) / 1.15);
   border-radius: 0.25rem;
 }
 

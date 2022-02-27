@@ -14,6 +14,7 @@
   height: 300px;
   padding: var(--padding);
   background-color: var(--bg-primary);
+  box-shadow: var(--box-shadow);
 }
 
 .imageWrapper::after {
@@ -44,6 +45,8 @@
   background-color: var(--bg-primary);
   padding: var(--padding);
   padding-left: 1rem;
+
+  box-shadow: var(--box-shadow);
 }
 
 #filterBtn {
@@ -91,6 +94,7 @@
   display: grid;
   place-content: center;
   padding: 3rem 1rem;
+  box-shadow: var(--box-shadow);
 }
 
 .sectionHeading {

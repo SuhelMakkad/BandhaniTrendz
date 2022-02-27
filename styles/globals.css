@@ -23,6 +23,9 @@
   --fw-black: 900;
 
   --cards-height: 275px;
+
+  --box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  --box-shadow-hover: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
 ::-webkit-scrollbar {

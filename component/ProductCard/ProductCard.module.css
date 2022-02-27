@@ -7,12 +7,12 @@
   cursor: pointer;
 }
 
-.bgSolids .peoductCard {
+.bgSolid.peoductCard {
   box-shadow: var(--box-shadow);
   transition: box-shadow 200ms ease-in;
 }
 
-.bgSolids .peoductCard:hover {
+.bgSolid.peoductCard:hover {
   box-shadow: var(--box-shadow-hover);
 }
 
@@ -26,19 +26,16 @@
   height: var(--cards-height);
   margin-bottom: 1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 1px;
-  border-radius: 0.75rem;
   overflow: hidden;
 }
 
 .bgSolid .imageWrapper {
   box-shadow: none;
   height: calc(var(--cards-height) / 1.15);
-  border-radius: 0.25rem;
 }
 
 .image {
   transition: transform 200ms ease-in-out;
-  border-radius: 0.75rem;
 }
 
 .heading {

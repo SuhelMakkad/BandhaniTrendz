@@ -11,6 +11,7 @@ import ProductDescription from "../../component/ProductDescription";
 import Footer from "../../component/Footer";
 
 import styles from "../../styles/Product.module.css";
+import Link from "next/link";
 
 export default function Product() {
   const [productImages, setProductImages] = useState([]);
@@ -82,16 +83,18 @@ export default function Product() {
                 <Carousel slidesPerView={5} spaceBetween={15} showPagination={false}>
                   {exploreImages && exploreImages.length
                     ? exploreImages.map((exploreImage, i) => (
-                        <div key={i} className={styles.imageWrapper}>
-                          <Image
-                            className={styles.exploreImage}
-                            src={exploreImage.src}
-                            width={400}
-                            height={450}
-                            layout="responsive"
-                          />
-                          <span className={styles.exploreImageTitle}>{exploreImage.title}</span>
-                        </div>
+                        <Link href={`/product/${i}`} key={i} className={styles.imageWrapper}>
+                          <a>
+                            <Image
+                              className={styles.exploreImage}
+                              src={exploreImage.src}
+                              width={400}
+                              height={450}
+                              layout="responsive"
+                            />
+                            <span className={styles.exploreImageTitle}>{exploreImage.title}</span>
+                          </a>
+                        </Link>
                       ))
                     : ["Loading..."]}
                 </Carousel>

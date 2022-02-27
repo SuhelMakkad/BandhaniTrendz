@@ -14,10 +14,15 @@
 
 .item {
   cursor: pointer;
+  color: rgb(99, 99, 99);
 }
 
 .item:hover {
   font-weight: var(--fw-semi-bold);
+}
+
+.item.active {
+  color: black;
 }
 
 @media (max-width: 700px) {

@@ -68,6 +68,7 @@ button {
   padding: 0.6em 1.25em;
   border-radius: 0.45rem;
   cursor: pointer;
+  font-weight: var(--fw-medium);
 }
 
 nav.active {

@@ -23,3 +23,19 @@
 #getItBtn:hover {
   background-color: rgba(255, 157, 0, 0.85);
 }
+
+.isSmall #mainImageSwiper {
+  order: -1;
+}
+
+.isSmall #sideImageSwiper {
+  height: 90px;
+}
+
+.isSmall.wrapper {
+  flex-direction: column;
+}
+
+.isSmall #sideImageSwiper {
+  width: 150px;
+}

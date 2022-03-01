@@ -66,3 +66,12 @@
   font-size: 1.05rem;
   font-weight: var(--fw-medium);
 }
+
+@media (max-width: 850px) {
+  .productWrapper {
+    flex-direction: column;
+  }
+  .productWrapper > * {
+    width: 100%;
+  }
+}

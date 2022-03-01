@@ -160,10 +160,7 @@
 
 #descriptionInput {
   height: 100px;
-}
-
-#descriptionInput {
-  height: 100px;
+  max-height: 250px !important;
 }
 
 @media (max-width: 750px) {

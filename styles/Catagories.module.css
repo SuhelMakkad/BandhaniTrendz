@@ -38,6 +38,7 @@
 }
 
 .filterWrapper {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 2.5rem;
@@ -61,13 +62,18 @@
   background-color: #ff6060;
 }
 
-.filterItems {
+.filterIndicatios {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.filterItem {
   font-weight: var(--fw-medium);
   position: relative;
   font-size: 1.1rem;
 }
 
-.filterItems::before {
+.filterItem::before {
   content: "";
   display: block;
   height: 6px;
@@ -79,6 +85,12 @@
   left: -1.1rem;
   transform: translateY(-50%);
   background-color: #000;
+}
+
+.infoIcon {
+  margin-left: auto;
+  display: none;
+  cursor: pointer;
 }
 
 .cardsGrid {
@@ -152,4 +164,34 @@
 
 #descriptionInput {
   height: 100px;
+}
+
+@media (max-width: 750px) {
+  .infoIcon {
+    display: block;
+  }
+
+  .filterIndicatios {
+    display: none;
+  }
+
+  .infoIcon:hover ~ .filterIndicatios,
+  .filterIndicatios:hover {
+    display: flex;
+    position: absolute;
+    top: 80%;
+    flex-direction: column;
+    right: 0.5rem;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 1rem;
+    border-radius: 0.7rem;
+    backdrop-filter: blur(5px);
+    border: 1px solid black;
+    gap: 0.5rem;
+  }
+  .infoIcon:hover ~ .filterIndicatios .filterItem::before,
+  .filterIndicatios:hover .filterItem::before {
+    display: none;
+  }
 }

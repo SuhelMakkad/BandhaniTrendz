@@ -9,6 +9,7 @@ import Navbar from "../component/Navbar";
 import TitleBar from "../component/TitleBar";
 import Carousel from "../component/Carousel";
 import ProductCard from "../component/ProductCard";
+import { Info } from "../component/Icons";
 
 import styles from "../styles/Catagories.module.css";
 
@@ -219,8 +220,13 @@ export default function Catagories() {
           <div className="wrapper pt-0">
             <div className={styles.filterWrapper}>
               <button id={styles.filterBtn}>filters</button>
-              <span className={styles.filterItems}>Category: All</span>
-              <span className={styles.filterItems}>Sort by: Popularity</span>
+              <span className={styles.infoIcon}>
+                <Info />
+              </span>
+              <div className={styles.filterIndicatios}>
+                <span className={styles.filterItem}>Category: All</span>
+                <span className={styles.filterItem}>Sort by: Popularity</span>
+              </div>
             </div>
 
             <div className={styles.cardsGrid}>

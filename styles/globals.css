@@ -247,3 +247,27 @@ nav.inactive {
   border: 2px solid black;
   outline-offset: 2px;
 }
+
+@media (max-width: 750px) {
+  :root {
+    --margin-x: 1.2rem;
+  }
+}
+
+@media (max-width: 650px) {
+  :root {
+    --margin-x: 0.95rem;
+  }
+}
+
+@media (max-width: 550px) {
+  :root {
+    --margin-x: 0.75rem;
+  }
+}
+
+@media (max-width: 450px) {
+  :root {
+    --margin-x: 0.65rem;
+  }
+}

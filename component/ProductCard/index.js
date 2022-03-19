@@ -5,9 +5,15 @@ import styles from "./ProductCard.module.css";
 
 export default function ProductCard({ product, bgSolid = false }) {
   return (
-    <div className={styles.peoductCard + " " + (bgSolid ? styles.bgSolid : "")}>
+    <div className={styles.productCard + " " + (bgSolid ? styles.bgSolid : "")}>
       <div className={styles.imageWrapper}>
-        <Image className={styles.image} src={product.src} alt={product.title} layout="fill" />
+        <Image
+          className={styles.image}
+          objectFit="contain"
+          src={product.src}
+          alt={product.title}
+          layout="fill"
+        />
       </div>
 
       <div className={styles.details}>

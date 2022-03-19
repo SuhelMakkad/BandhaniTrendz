@@ -21,7 +21,6 @@ export default function ProductImages({ images }) {
         spaceBetween={10}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[Navigation, Thumbs]}
-        autoHeigh={true}
       >
         {images.map((image, i) => (
           <SwiperSlide key={i}>
@@ -43,7 +42,6 @@ export default function ProductImages({ images }) {
         modules={[Navigation, Thumbs]}
         direction="horizontal"
         slidesPerView={4}
-        autoHeigh={true}
         breakpoints={{
           650: {
             slidesPerView: 5,
@@ -62,7 +60,6 @@ export default function ProductImages({ images }) {
           },
         }}
       >
-        {console.log("Thhis is small")}
         {images.map((image, i) => (
           <SwiperSlide key={i}>
             <Image className={styles.sideImage} src={image} layout="fill" objectFit="cover" />

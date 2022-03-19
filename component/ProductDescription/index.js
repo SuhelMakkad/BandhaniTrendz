@@ -38,8 +38,6 @@ export default function ProductDescription() {
         <p className={styles.avgRatingTop}>253 Ratings & 38 Reviews</p>
       </div>
 
-      <span className={styles.price}>₹ 1899</span>
-
       <span className={styles.divider}></span>
 
       <div className={styles.detailsSectionn}>

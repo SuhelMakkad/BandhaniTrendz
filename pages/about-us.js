@@ -55,18 +55,21 @@ export default function AboutUs() {
       <main className={styles.main}>
         <section
           id={styles.heroSection}
-          className="bg-gradient"
+          className="bg-gradient animate"
           ref={firstSection}
           aria-describedby="BANDHANI TRENDZ is a manufacturer Of finest BANDHANI cloths"
         >
           <div className="wrapper">
             <header>
               <h2 className={styles.heading}>
-                BANDHANI TRENDZ is a manufacturer <br /> Of finest BANDHANI cloths
+                BANDHANI TRENDZ is a manufacturer <br /> Of finest BANDHANI Cloths
               </h2>
             </header>
 
-            <p className={styles.subHeading}>Founded by Uvesh Sadeki</p>
+            <p className={styles.subHeading}>
+              <span>Founded by</span>
+              <span id="founder-name"> Uvesh Sadeki</span>
+            </p>
           </div>
         </section>
 

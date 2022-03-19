@@ -136,6 +136,41 @@ nav.inactive {
     );
 }
 
+.bg-gradient.animate {
+  background: linear-gradient(-45deg, rgba(0, 138, 88, 1)), rgba(139, 81, 36, 1), rgba(96, 0, 0, 1);
+  background-size: 250% 250%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+#founder-name {
+  font-weight: var(--fw-bold);
+  animation: fontColorAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fontColorAnimation {
+  0% {
+    color: #35b852;
+  }
+  50% {
+    color: #fca71f;
+  }
+  100% {
+    color: #35b852;
+  }
+}
+
 .two-section-wrapper {
   display: flex;
   align-items: center;

@@ -43,6 +43,13 @@ export default function Product() {
       "/assets/images/dress_5.jpeg",
       "/assets/images/saree_6.jpeg",
       "/assets/images/dupata_2.jpeg",
+      "/assets/images/saree_4.jpeg",
+      "/assets/images/dress_5.jpeg",
+      "/assets/images/saree_6.jpeg",
+      "/assets/images/saree_4.jpeg",
+      "/assets/images/dupata_2.jpeg",
+      "/assets/images/saree_4.jpeg",
+      "/assets/images/saree_6.jpeg",
     ]);
   }, []);
 

@@ -16,7 +16,6 @@ export default function ProductCard({ product, bgSolid = false }) {
           <RatingStars totalStars={product.rating} />
           <span className={styles.reviewCount}>({product.reviewCount})</span>
         </div>
-        <span className={styles.price}>₹ {product.price}</span>
       </div>
     </div>
   );

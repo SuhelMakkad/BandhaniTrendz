@@ -11,6 +11,7 @@ export default function Carousel({
   slidesPerView = 1,
   slidesPerGroup = 1,
   showPagination = true,
+  breakpoints = {},
 }) {
   return (
     <>
@@ -23,6 +24,7 @@ export default function Carousel({
         pagination={{
           dynamicBullets: true,
         }}
+        breakpoints={breakpoints}
       >
         {children && children.length
           ? children.map((child, i) => <SwiperSlide key={i}>{child}</SwiperSlide>)

@@ -21,6 +21,7 @@ export default function ProductImages({ images }) {
         spaceBetween={10}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[Navigation, Thumbs]}
+        autoHeigh={true}
       >
         {images.map((image, i) => (
           <SwiperSlide key={i}>
@@ -44,8 +45,20 @@ export default function ProductImages({ images }) {
         slidesPerView={4}
         autoHeigh={true}
         breakpoints={{
-          850: {
+          650: {
             slidesPerView: 5,
+          },
+          750: {
+            slidesPerView: 6,
+          },
+          850: {
+            slidesPerView: 4,
+          },
+          950: {
+            slidesPerView: 5,
+          },
+          1150: {
+            slidesPerView: 6,
           },
         }}
       >

@@ -87,7 +87,25 @@ export default function Product() {
               </header>
 
               <div className={styles.exploreCarousel}>
-                <Carousel slidesPerView={5} spaceBetween={15} showPagination={false}>
+                <Carousel
+                  slidesPerView={2}
+                  spaceBetween={15}
+                  showPagination={false}
+                  breakpoints={{
+                    550: {
+                      slidesPerView: 3,
+                    },
+                    750: {
+                      slidesPerView: 4,
+                    },
+                    950: {
+                      slidesPerView: 5,
+                    },
+                    1150: {
+                      slidesPerView: 6,
+                    },
+                  }}
+                >
                   {exploreImages && exploreImages.length
                     ? exploreImages.map((exploreImage, i) => (
                         <Link href={`/product/${i}`} key={i} className={styles.imageWrapper}>
